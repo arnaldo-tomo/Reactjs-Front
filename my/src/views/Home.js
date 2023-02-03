@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from 'axios';
 
 class Home extends Component {
     state = {
@@ -14,8 +15,9 @@ class Home extends Component {
         });
     }
 
-    saveStudent = (e) => {
+    saveStudent = async (e) => {
         e.preventDefault();
+        const res = await axios.post('api/salvar', this.state);
     }
     render() {
 
