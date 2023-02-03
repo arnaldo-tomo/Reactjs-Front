@@ -1,6 +1,6 @@
-import React, { Component } from 'React';
+// import React, { Component } from 'React';
 import { React } from 'react';
-import student from './student';
+// import student from './student';
 import { Link } from 'react-router-dom';
 class student extends Comment {
     render() {
@@ -10,7 +10,7 @@ class student extends Comment {
                     <div className='card'>
                         <div className='card-header'>
                             <h5>student
-                                <Link to={'addSudent'} className="btn btn-success btn-sm float-end" >Addstudent</Link>
+                                <Link to={'student'} className="btn btn-success btn-sm float-end" >Addstudent</Link>
                             </h5>
                         </div>
                         <div className='card-body'>
