@@ -11,13 +11,22 @@ class Home extends Component {
 
     handleInput = (e) => {
         this.setState({
-            [e.target.nome]: e.target.value
+            [e.target.name]: e.target.value
         });
     }
 
     saveStudent = async (e) => {
         e.preventDefault();
-        const res = await axios.post('/api/salvar', this.state);
+        const res = await axios.post('http://localhost:3000/api/salvar', this.state);
+        if (res.date.status == 200) {
+            console.log(res.data.message);
+            this.setState({
+                nome: '',
+                curso: '',
+                email: '',
+                telefone: '',
+            })
+        }
     }
     render() {
 
@@ -52,7 +61,7 @@ class Home extends Component {
                                 </div>
                                 <div className="form-group mb-2">
                                     <label for="">Telefone</label>
-                                    <input type="number" name="curso" onChange={this.handleInput} value={this.state.telefone} id="telefone" className="form-control" placeholder="Telefone" aria-describedby="helpId" />
+                                    <input type="text" name="telefone" onChange={this.handleInput} value={this.state.telefone} id="telefone" className="form-control" placeholder="Telefone" aria-describedby="helpId" />
                                 </div>
                                 <div className="form-group mb-2">
                                     <a type="submit" className="btn btn-success btn-block btn-rounded "><i className=" fa fa-cloud"></i> Upload</a>
