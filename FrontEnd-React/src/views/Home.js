@@ -17,15 +17,17 @@ class Home extends Component {
 
     saveStudent = async (e) => {
         e.preventDefault();
-        const res = await axios.post('http://localhost:3000/api/salvar', this.state);
+
+        const res = await axios.post('http://127.0.0.1:8000/api/salvar', this.state);
+
         if (res.date.status == 200) {
             console.log(res.data.message);
-            this.setState({
+            this.setstate({
                 nome: '',
                 curso: '',
                 email: '',
                 telefone: '',
-            })
+            });
         }
     }
     render() {
@@ -53,18 +55,18 @@ class Home extends Component {
                                 </div>
                                 <div className="form-group mb-2">
                                     <label for="">Curso</label>
-                                    <input type="text" name="curso" onChange={this.handleInput} value={this.state.curso} id="" className="form-control" placeholder="Curso" aria-describedby="helpId" />
+                                    <input type="text" name="curso" onChange={this.handleInput} value={this.state.curso} className="form-control" placeholder="Curso" aria-describedby="helpId" />
                                 </div>
                                 <div className="form-group mb-2">
                                     <label for="">Email</label>
-                                    <input type="email" name="email" onChange={this.handleInput} value={this.state.email} id="" className="form-control" placeholder="Email" aria-describedby="helpId" />
+                                    <input type="email" name="email" onChange={this.handleInput} value={this.state.email} className="form-control" placeholder="Email" aria-describedby="helpId" />
                                 </div>
                                 <div className="form-group mb-2">
                                     <label for="">Telefone</label>
-                                    <input type="text" name="telefone" onChange={this.handleInput} value={this.state.telefone} id="telefone" className="form-control" placeholder="Telefone" aria-describedby="helpId" />
+                                    <input type="text" name="telefone" onChange={this.handleInput} value={this.state.telefone} className="form-control" placeholder="Telefone" aria-describedby="helpId" />
                                 </div>
                                 <div className="form-group mb-2">
-                                    <a type="submit" className="btn btn-success btn-block btn-rounded "><i className=" fa fa-cloud"></i> Upload</a>
+                                    <button type="submit" className="btn btn-success btn-block btn-rounded "><i className=" fa fa-cloud"></i> Upload</button>
                                 </div>
 
                             </form>
