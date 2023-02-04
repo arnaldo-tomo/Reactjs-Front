@@ -18,7 +18,16 @@ class ControllerStudent extends Controller
 
         return  response()->json([
             'status' => 200,
-            'message' => 'estudante salvo com sucessos',
+            'message' => 'Estudante Salvo Com Sucessos',
+        ]);
+    }
+
+    public function getStude()
+    {
+        $student = student::all();
+        return  response()->json([
+            'status' => 200,
+            ' student ' => $student,
         ]);
     }
 }
