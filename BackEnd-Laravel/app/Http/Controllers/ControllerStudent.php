@@ -17,7 +17,7 @@ class ControllerStudent extends Controller
         $dado->save();
 
         return  response()->json([
-            'status', 200,
+            'status' => 200,
             'message' => 'estudante salvo com sucessos',
         ]);
     }
