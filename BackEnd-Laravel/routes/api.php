@@ -6,3 +6,4 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 Route::post('/salvar', [ControllerStudent::class, 'salvar']);
+Route::get('/todos', [ControllerStudent::class, 'getStude']);
