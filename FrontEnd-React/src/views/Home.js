@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import axios from 'axios';
+import { Link } from "react-router-dom";
 
 class Home extends Component {
+
+    //Nomes das variaves dos inutos
     state = {
         nome: '',
         curso: '',
@@ -14,6 +17,8 @@ class Home extends Component {
             [e.target.name]: e.target.value
         });
     }
+
+    //metodos para salvar do sub,it nos foms
 
     saveStudent = async (e) => {
         e.preventDefault();
@@ -46,7 +51,7 @@ class Home extends Component {
                                     <strong> ReacJS Front</strong>
                                 </div>
                                 <div className="col-6">
-                                    <a className="btn btn-success btn-sm float-end"><i className="fa fa-plus"></i> Add New Student </a>
+                                    <Link to={'/'} className="btn btn-success btn-sm float-end"><i className="fa fa-arrow-left"></i> Back </Link>
                                 </div>
                             </div>
                         </div>
