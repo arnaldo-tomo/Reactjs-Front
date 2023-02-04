@@ -20,9 +20,13 @@ class Home extends Component {
 
         const res = await axios.post('http://127.0.0.1:8000/api/salvar', this.state);
 
-        if (res.date.status == 200) {
+        if (res.data.status == 200) {
+
             console.log(res.data.message);
-            this.setstate({
+
+
+            //depois de limpar mostra
+            this.setState({
                 nome: '',
                 curso: '',
                 email: '',
@@ -59,7 +63,7 @@ class Home extends Component {
                                 </div>
                                 <div className="form-group mb-2">
                                     <label for="">Email</label>
-                                    <input type="email" name="email" onChange={this.handleInput} value={this.state.email} className="form-control" placeholder="Email" aria-describedby="helpId" />
+                                    <input type="text" name="email" onChange={this.handleInput} value={this.state.email} className="form-control" placeholder="Email" aria-describedby="helpId" />
                                 </div>
                                 <div className="form-group mb-2">
                                     <label for="">Telefone</label>
