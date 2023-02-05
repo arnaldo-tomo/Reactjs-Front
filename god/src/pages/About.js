@@ -1,16 +1,14 @@
 import { Component } from "react";
-import { Link } from 'react-router-dom';
+import Menu from "./components/Menu";
 class About extends Component {
     render() {
         return (
-            <div>
-                <h1>Estas na pagina About</h1>
-                <ul>
-                    <Link to={'welcome'} ><li>welcome</li> </Link>
-                    <Link to={'/'}><li>About</li> </Link>
-                    <a href="About" ><li>Home</li> </a>
-                </ul>
-            </div>
+            <>
+                <Menu />
+                <div className="container">
+                    <h1>About</h1>
+                </div>
+            </>
         );
     }
 }
