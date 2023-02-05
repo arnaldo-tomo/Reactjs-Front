@@ -1,14 +1,19 @@
 import { Component } from "react";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Menu from "./components/Menu";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 
 
+
 export default function Home() {
+    const navigate = useNavigate();
     const { register, formState: { errors }, handleSubmit } = useForm();
+
     const onSubmit = (data) => axios.post("http://reactjs-front.com/BackEnd-Laravel/public/api/salvar", data)
+
         .then(() => {
+            navigate('/');
             console.log("deu tudoe certo")
         })
         .catch(() => {
