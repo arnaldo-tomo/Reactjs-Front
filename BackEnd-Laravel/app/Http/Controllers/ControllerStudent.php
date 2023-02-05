@@ -25,9 +25,6 @@ class ControllerStudent extends Controller
     public function getStude()
     {
         $student = student::all();
-        return  response()->json([
-            'status' => 200,
-            ' student ' => $student,
-        ]);
+        return  response()->json($student);
     }
 }
