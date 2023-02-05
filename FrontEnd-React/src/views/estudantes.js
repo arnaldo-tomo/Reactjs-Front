@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import axios from "axios";
 
 class estudantes extends Component {
@@ -56,8 +57,9 @@ class estudantes extends Component {
                                 <div className="col-6">
                                     <strong>Lista de estudantes</strong>
                                 </div>
+                                <Link href="/Home">hjbvhjlh</Link>
                                 <div className="col-6">
-                                    <Link to={'home'} className="btn btn-success float-end btn-sm">
+                                    <Link to={'Home'} className="btn btn-success float-end btn-sm">
                                         <i className="fa fa-plus"></i> Criar Estudante
                                     </Link>
                                 </div>
