@@ -1,5 +1,6 @@
 import { Component } from "react";
 import About from './../About';
+import { Link } from "react-router-dom";
 class Menu extends Component {
 
     render() {
@@ -7,7 +8,7 @@ class Menu extends Component {
         const login = "Add new Post "
         return (
             <div className="container shadow-2">
-                <nav className="navbar bg-light" data-bs-theme="dark" className="navbar navbar-expand-lg bg-body-tertiary">
+                <nav className="navbar" className="navbar navbar-expand-lg bg-body-tertiary">
                     <div className="container-fluid">
                         <a className="btn btn-primary btn-sm" href="/">{nab}</a>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,14 +17,14 @@ class Menu extends Component {
                         <div className="collapse float-end navbar-collapse" id="navbarNavAltMarkup">
                             <div className="navbar-nav">
                                 <a className="nav-link active" aria-current="page" href="/Home">Home</a>
-                                <a className="nav-link active" aria-current="page" href="/About" >About</a>
+                                <Link className="nav-link active" aria-current="page" to={'/About'} >About</Link>
 
                             </div>
                         </div>
                         <a className="btn btn-success btn-sm d-felx justify-content-end" href="/Home">{login}</a>
                     </div>
                 </nav>
-            </div>
+            </div >
         );
     }
 }
