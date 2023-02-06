@@ -39,8 +39,8 @@ export default function Welcome() {
                                             <p>Telefone: {pessoa.telefone}</p>
                                             <div className="m-2 d-flex justify-content-between">
                                                 <Link to={{ pathname: `/about/${pessoa.id}` }} className="btn btn-success btn-sm m-2">EDITAR</Link>
-                                                <a className="btn btn-info btn-sm m-2">Ler MaIs</a>
-                                                <a className="btn btn-danger btn-sm m-2">Deletar</a>
+                                                <Link to={{ pathname: `/show/${pessoa.id}` }} className="btn btn-info btn-sm m-2">Ler MaIs</Link>
+                                                <Link to={{ pathname: `/delete/${pessoa.id}` }} className="btn btn-danger btn-sm m-2">Deletar</Link>
                                             </div>
                                         </div>
                                     </div>
