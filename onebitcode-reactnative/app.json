@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "onebitcode-reactnative",
+    "slug": "onebitcode-reactnative",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
