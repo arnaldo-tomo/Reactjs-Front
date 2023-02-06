@@ -7,3 +7,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('/salvar', [ControllerStudent::class, 'salvar']);
 Route::get('/todos', [ControllerStudent::class, 'getStude']);
+Route::get('/find/{id}', [ControllerStudent::class, 'find']);
