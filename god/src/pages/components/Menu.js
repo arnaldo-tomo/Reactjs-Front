@@ -17,7 +17,7 @@ class Menu extends Component {
                         <div className="collapse float-end navbar-collapse" id="navbarNavAltMarkup">
                             <div className="navbar-nav">
                                 <a className="nav-link active" aria-current="page" href="/Home">Home</a>
-                                <Link className="nav-link active" aria-current="page" to={'/About'} >About</Link>
+                                <Link className="nav-link active" aria-current="page" to={'/about'} >About</Link>
 
                             </div>
                         </div>
