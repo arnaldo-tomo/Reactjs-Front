@@ -24,7 +24,7 @@ export default function About() {
 
     }, []);
 
-    const onSubmit = (data) => axios.post("http://reactjs-front.com/BackEnd-Laravel/public/api/salvar", data)
+    const onSubmit = (data) => axios.post("http://reactjs-front.com/BackEnd-Laravel/public/api/update", data)
         .then(() => {
             navigate('/');
             console.log("deu tudoe certo")
@@ -45,6 +45,9 @@ export default function About() {
                                         <strong>Criar dados</strong><Link to={'/'} className="btn btn-info btn-sm float-end">Voltar</Link>
                                         <hr></hr>
                                         <form onSubmit={handleSubmit(onSubmit)}>
+                                            <div className="input-group mb-3">
+                                                <input type="hidden" {...register("id", { required: true })} className="form-control" placeholder="Username" aria-label="Username" />
+                                            </div>
                                             <div className="input-group mb-3">
                                                 <span className="input-group-text" id="basic-addon1">Nome</span>
                                                 <input type="text" {...register("nome", { required: true })} className="form-control" placeholder="Username" aria-label="Username" />
