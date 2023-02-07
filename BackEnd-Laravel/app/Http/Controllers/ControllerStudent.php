@@ -27,11 +27,13 @@ class ControllerStudent extends Controller
         $student = student::all();
         return  response()->json($student);
     }
+
     public function find($id)
     {
         $student = student::find($id);
         return  response()->json($student);
     }
+
     public function delete($id)
     {
         $student = student::find($id);
