@@ -6,6 +6,9 @@ import { Link } from 'react-router-dom';
 
 export default function Welcome() {
 
+    function delte(id) {
+        console.log('FUi chamdo')
+    }
     let [dado, Dados] = useState([]);
     useEffect(() => {
 
@@ -28,7 +31,7 @@ export default function Welcome() {
                 return (
                     <div className="container" key={key}>
                         <div className=" d-flex justify-content-center">
-                            <div className="row col-md-6 col-sm-6  ">
+                            <div className="row col-md-12 col-sm-12  ">
                                 <div className="col-12  py-2">
                                     <div className="card ">
                                         <div className="card-header">
@@ -41,6 +44,7 @@ export default function Welcome() {
                                                 <Link to={{ pathname: `/about/${pessoa.id}` }} className="btn btn-success btn-sm m-2">EDITAR</Link>
                                                 <Link to={{ pathname: `/show/${pessoa.id}` }} className="btn btn-info btn-sm m-2">Ler MaIs</Link>
                                                 <Link to={{ pathname: `/delete/${pessoa.id}` }} className="btn btn-danger btn-sm m-2">Deletar</Link>
+                                                <a onClick={() => delte(pessoa.id)} className="btn btn-danger btn-sm m-2">Deletar</a>
                                             </div>
                                         </div>
                                     </div>
