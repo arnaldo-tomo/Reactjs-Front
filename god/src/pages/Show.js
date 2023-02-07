@@ -27,7 +27,7 @@ export default function Show() {
             <div className="container ">
                 <div className="container">
                     <div className=" d-flex justify-content-center">
-                        <div className="row col-md-6 col-sm-6 py-4 ">
+                        <div className="row col-md-12 col-sm-12 py-4 ">
                             <div className="col-12 ">
                                 <div className="card ">
                                     <div className="card-header">
