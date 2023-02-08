@@ -4,6 +4,11 @@ import { Link } from "react-router-dom";
 
 class Home extends Component {
 
+    get() {
+        console.log('Clicado');
+
+    }
+
     //Nomes das variaves dos inutos
     state = {
         nome: '',
@@ -23,7 +28,7 @@ class Home extends Component {
     saveStudent = async (e) => {
         e.preventDefault();
 
-        const res = await axios.post('http://127.0.0.1:8000/api/salvar', this.state);
+        const res = await axios.post('http://reactjs-front.com/BackEnd-Laravel/public/api/todos', this.state);
 
         if (res.data.status == 200) {
 
@@ -80,6 +85,8 @@ class Home extends Component {
 
                             </form>
                         </div>
+
+                        <button className="btn btn-primary" onClick={this.get}>CLike so</button>
 
                     </div>
                 </div>
