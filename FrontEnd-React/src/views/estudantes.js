@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import axios from "axios";
 
 class estudantes extends Component {
@@ -11,7 +10,7 @@ class estudantes extends Component {
         loading: true,
     }
     async componentDidMount() {
-        const res = await axios.get('http://127.0.0.1:8000/api/todos');
+        const res = await axios.get('http://reactjs-front.com/BackEnd-Laravel/public/api/todos');
         console.log(res);
 
         if (res.data.status == 200) {
