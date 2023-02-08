@@ -3,12 +3,16 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
+
+  function get() {
+    console.log()
+  }
   return (
     <View style={styles.container}>
       <Text>react-dom": "^18.2.0</Text>
       <StatusBar style="auto" />
 
-      <button className='btn'>bfbdg</button>
+      <button onClick={get()} className='btn'>bfbdg</button>
     </View>
   );
 }
