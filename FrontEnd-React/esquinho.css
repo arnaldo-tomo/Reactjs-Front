@@ -1,0 +1,27 @@
+.login {
+    text-align: center;
+    padding-top: 200px;
+    border-radius: 20px;
+}
+
+input {
+    height: 30px;
+    width: 400px;
+    padding-bottom: 10px;
+
+}
+
+button {
+    height: 40px;
+    width: 400px;
+    color: white;
+    background-color: black;
+}
+
+button:hover {
+    height: 50px;
+    width: 500px;
+    background-color: blueviolet;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: large;
+}
