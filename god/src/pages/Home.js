@@ -11,7 +11,6 @@ export default function Home() {
     const { register, formState: { errors }, handleSubmit } = useForm();
 
     const onSubmit = (data) => axios.post("http://reactjs-front.com/BackEnd-Laravel/public/api/salvar", data)
-
         .then(() => {
             navigate('/');
             console.log("deu tudoe certo")
