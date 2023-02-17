@@ -32,16 +32,14 @@ export default function Welcome() {
     return (
         <>
             <Menu />
-            <button className="btn btn-primary" onClick={() => nado(b)}>CLica so</button>
-
             {
                 dado.map((pessoa, key) => {
                     return (
 
                         <div className="container" key={key}>
                             <div className=" d-flex justify-content-center">
-                                <div className="row col-md-12 col-sm-12  ">
-                                    <div className="col-12  py-2">
+                                <div className="row col-md-6 col-sm-6  ">
+                                    <div className="col-8 py-2">
                                         <div className="card ">
                                             <div className="card-header">
                                                 <strong>ID:{pessoa.id} - {pessoa.nome}</strong>
