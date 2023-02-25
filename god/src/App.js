@@ -4,12 +4,14 @@ import About from './pages/About';
 import Welcome from './pages/Welcome';
 import Delete from './pages/components/Delete';
 import Show from './pages/Show';
+import Aula from './pages/Aulas';
 function App() {
   return (
 
     <BrowserRouter>
       <Routes>
-        <Route exact path='/' element={<Welcome />} />
+        <Route exact path='/' element={<Aula />} />
+        {/* <Route exact path='/' element={<Welcome />} /> */}
         <Route path='/Home' element={<Home />} />
         <Route path='/About/:id' element={<About />} />
         <Route path='/Delete/:id' element={<Delete />} />
